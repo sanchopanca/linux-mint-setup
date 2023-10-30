@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 
 # upgrade all packages
 sudo apt update
@@ -18,4 +19,12 @@ rm rustup.sh
 source "$HOME/.cargo/env"
 cargo install nu
 
-sudo chsh -s $(which nu) $USER
+nu_path=$(which nu)
+
+if ! grep -q "$nu_path" /etc/shells; then
+  # Add Nu to the list of valid shells
+  echo "Adding Nu to list of valid shells..."
+  echo "$nu_path" | sudo tee -a /etc/shells
+fi
+
+sudo chsh -s $nu_path $USER
