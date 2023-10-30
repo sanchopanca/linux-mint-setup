@@ -25,4 +25,4 @@ if ! grep -q "$nu_path" /etc/shells; then
   echo "$nu_path" | sudo tee -a /etc/shells
 fi
 
-chsh -s $USER
+chsh -s $nu_path
