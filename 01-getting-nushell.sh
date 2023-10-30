@@ -5,7 +5,7 @@ sudo apt update
 sudo apt upgrade -y
 
 # install build tools, they are needed for building nushell
-sudo apt install -y build-essential gcc-multilib
+sudo apt install -y build-essential gcc-multilib libssl-dev
 
 # the easiest way to get nushell is to use cargo
 # we will need rust toolchain anyway, so why not use it now
