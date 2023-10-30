@@ -26,3 +26,5 @@ if ! grep -q "$nu_path" /etc/shells; then
 fi
 
 chsh -s $nu_path
+
+echo "Please logout and log back in for the changes to take effect."

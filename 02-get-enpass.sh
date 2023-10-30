@@ -2,3 +2,5 @@ echo "deb https://apt.enpass.io/  stable main" | sudo tee /etc/apt/sources.list.
 wget -O - https://apt.enpass.io/keys/enpass-linux.key | sudo tee /etc/apt/trusted.gpg.d/enpass.asc
 sudo apt-get update
 sudo apt-get install -y enpass
+
+echo "Finish enpass setup before continuing with the next step."
