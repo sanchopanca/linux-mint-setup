@@ -20,15 +20,13 @@ echo ".cfg" >> .gitignore
 
 git clone --bare git@github.com:sanchopanca/dotfiles.git $HOME/.cfg
 
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-
 # If a config file already exists, move it to .config-backup
 mkdir -p .config-backup && \
-config checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | \
+git --git-dir=$HOME/.cfg/ --work-tree=$HOME checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | \
 xargs -I{} mv {} .config-backup/{}
 
-config checkout
+git --git-dir=$HOME/.cfg/ --work-tree=$HOME checkout
 
-config config --local status.showUntrackedFiles no
+git --git-dir=$HOME/.cfg/ --work-tree=$HOME config --local status.showUntrackedFiles no
 
 popd
