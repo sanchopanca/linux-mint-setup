@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Ask for the sudo password at the beginning
+sudo echo "Starting setup..."
+
 # the easiest way to get nushell is to use cargo
 # we will need rust toolchain anyway, so why not use it now
 
