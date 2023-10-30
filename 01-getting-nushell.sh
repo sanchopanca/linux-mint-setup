@@ -8,6 +8,7 @@ chmod +x rustup.sh
 ./rustup.sh -y
 rm rustup.sh
 
+source "$HOME/.cargo/env"
 cargo install nushell
 
 sudo chsh -s $(which nu) $USER
