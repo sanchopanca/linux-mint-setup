@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
 
-# Ask for the sudo password at the beginning
-sudo echo "Starting setup..."
+# upgrade all packages
+sudo apt update
+sudo apt upgrade -y
+
+# install build tools, they are needed for building nushell
+sudo apt install -y build-essential gcc-multilib
 
 # the easiest way to get nushell is to use cargo
 # we will need rust toolchain anyway, so why not use it now
