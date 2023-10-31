@@ -27,7 +27,3 @@ sudo unzip ~/Downloads/FiraCode.zip FiraCodeNerdFontMono-Regular.ttf FiraCodeNer
 rm ~/Downloads/FiraCode.zip
 
 sudo wget -O /usr/local/share/fonts/NotoColorEmoji.ttf https://github.com/googlefonts/noto-emoji/raw/main/fonts/NotoColorEmoji.ttf
-
-
-
-# todo: good fonts for terminal, prompt for terminal
