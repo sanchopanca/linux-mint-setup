@@ -27,3 +27,8 @@ sudo unzip ~/Downloads/FiraCode.zip FiraCodeNerdFontMono-Regular.ttf FiraCodeNer
 rm ~/Downloads/FiraCode.zip
 
 sudo wget -O /usr/local/share/fonts/NotoColorEmoji.ttf https://github.com/googlefonts/noto-emoji/raw/main/fonts/NotoColorEmoji.ttf
+
+let $profile_id = dconf list /org/gnome/terminal/legacy/profiles:/
+
+dconf write $"/org/gnome/terminal/legacy/profiles:/($profile_id)font" "'FiraCode Nerd Font Mono 12'"
+dconf write $"/org/gnome/terminal/legacy/profiles:/($profile_id)use-system-font" false
