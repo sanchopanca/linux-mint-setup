@@ -3,8 +3,8 @@ set -euo pipefail
 
 sudo apt update
 
-# install build tools, they are needed for building nushell
-sudo apt install -y build-essential gcc-multilib libssl-dev
+# install build tools, they are needed for building nushell and starship
+sudo apt install -y build-essential gcc-multilib libssl-dev make
 
 # the easiest way to get nushell is to use cargo
 # we will need rust toolchain anyway, so why not use it now
@@ -16,6 +16,9 @@ rm rustup.sh
 
 source "$HOME/.cargo/env"
 cargo install nu
+
+# starship terminal prompt
+cargo install starship
 
 nu_path=$(which nu)
 
