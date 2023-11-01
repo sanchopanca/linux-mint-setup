@@ -6,9 +6,9 @@ sudo dpkg -i ~/Downloads/vscode.deb
 rm ~/Downloads/vscode.deb
 
 # obs studio
-sudo add-apt-repository ppa:obsproject/obs-studio
+sudo add-apt-repository -y ppa:obsproject/obs-studio
 # helix
-sudo add-apt-repository ppa:maveonair/helix-editor
+sudo add-apt-repository -y ppa:maveonair/helix-editor
 
 sudo apt update
 
