@@ -1,10 +1,16 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# needed to install carapace
+echo "deb [trusted=yes] https://apt.fury.io/rsteube/ /" | sudo tee /etc/apt/sources.list.d/fury.list
+
 sudo apt update
 
 # install build tools, they are needed for building nushell and starship
 sudo apt install -y build-essential gcc-multilib libssl-dev cmake
+
+# install carapace
+sudo apt install -y carapace-bin
 
 # the easiest way to get nushell is to use cargo
 # we will need rust toolchain anyway, so why not use it now
