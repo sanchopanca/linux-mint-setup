@@ -13,7 +13,7 @@ sudo add-apt-repository -y ppa:maveonair/helix-editor
 sudo apt update
 
 # all the software that i need
-sudo apt install -y anki audacity cheese ffmpeg helix kdenlive meld obs-studio vlc-bin
+sudo apt install -y anki audacity cheese ffmpeg helix kdenlive meld mintnanny obs-studio vlc-bin
 
 # all the rust based tools that i need
 cargo install ripgrep
