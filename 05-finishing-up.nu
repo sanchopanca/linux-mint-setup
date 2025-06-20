@@ -2,7 +2,7 @@
 
 # installing vscode
 wget https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64 -O ~/Downloads/vscode.deb
-sudo dpkg -i ~/Downloads/vscode.deb
+sudo apt install ~/Downloads/vscode.deb
 rm ~/Downloads/vscode.deb
 
 # obs studio
